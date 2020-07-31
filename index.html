@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECX Github Invite</title>
+    <link rel="icon" href="ecx.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form">
+        <div class="container">
+            <img src="ecx-logo.png" alt="logo" class="logo">
+            <div id="main" class="main">
+                <h1>Engineering Career Expo</h1>
+                <p class="text">Enter your GitHub Username below to get invited to @test-git-invite-org GitHub</p>
+                <div class="result">
+                    <div>
+                    <label for="text">Username</label>
+                    <input type="text" id="input">
+                    </div>
+                    <div class="btn"><button id="user">Get Invited</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var input = document.getElementById("input") 
+        document.querySelector('#user').addEventListener('click',function(){
+            if (input.value === "") {
+                alert("Input cannot be empty")
+            }
+            else{
+            document.getElementById('main').innerHTML = `
+            <div class='invitation'>
+            <p class='invite'>Invite Sent</p>
+            <p class='sent'>Dear ${input.value}, </p>
+            <p class='sent'>Kindly check your inbox and accept the invitation that has been sent to you.</p>
+            <p class='sent'>Thank you!</p>
+            </div>
+            `
+            }
+        })
+    </script>
+</body>
+</html>
